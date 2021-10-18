@@ -1,16 +1,16 @@
-import cardsFood from "./menu.json"
 
+import cardsFood from "./menu.json"
 // import toggleTheme from "./createTheme"
 import createMurkupList from "./createMurkup"
 
 
 const listFoodEl = document.querySelector('.js-menu');
-
-
 const createMurkup = createMurkupList(cardsFood);
+const savedTheme = localStorage.getItem('createTheme');
+
 listFoodEl.insertAdjacentHTML('afterbegin', createMurkup);
 
-const savedTheme = localStorage.getItem('createTheme');
+
 
 document.body.classList.add(savedTheme);
 
